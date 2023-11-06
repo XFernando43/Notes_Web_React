@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Roboto&family=Roboto+Condensed:wght@600&family=Roboto+Slab:wght@500&display=swap');
+
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.loggin__title{
+    color: #18181B;
+    font-family: Roboto;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px; /* 111.111% */
+    letter-spacing: 0.25px;
+}
+
+.loggin__form{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+}
+
+.loggin__form label{
+    color: #18181B;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px; /* 155.556% */
+    letter-spacing: 0.25px;
+}
+
+.input-group{
+    margin-top: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.input{
+    border-radius: 9px;
+    padding: 8px 16px;
+    border: 2px solid black;
+}
+
+.button{
+    padding: 8px 16px;
+    width: 241px;
+    background-color: black;
+    color: white;
+    border-radius: 16px;
+}
+
+.button:hover{
+    background-color: hsl(0, 0%, 45%);
+}
