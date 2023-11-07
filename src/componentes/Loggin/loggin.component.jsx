@@ -1,12 +1,11 @@
 import React from "react";
 import './loggin.style.css'; // Cambio en la importación de estilos
 
-export default function LoggingComponent() {
-    const [username, setUsername] = React.useState('');
+export default function LoggingComponent({updateUsername}) {
+    const [value, setValue] = React.useState('');
 
-    function handleSubmit(event) {
+    function handleSubmit(event){
         event.preventDefault();
-        localStorage.setItem('username', username); // Guarda el nombre de usuario en el localStorage al enviar el formulario
     }
 
     return (
@@ -22,10 +21,11 @@ export default function LoggingComponent() {
                         id="username"
                         className="input"
                         required
-                        value={username} // Agrega el valor del estado al campo de entrada
-                        onChange={(e) => setUsername(e.target.value)} // Maneja los cambios en el campo de entrada
+                        onChange={(e) => setValue(e.target.value)} 
                     />
-                    <button type="submit" className="button">
+                    <button type="submit" className="button" onClick={()=>{
+                        updateUsername(value)
+                    }}>
                         Enter
                     </button>
                 </div>
