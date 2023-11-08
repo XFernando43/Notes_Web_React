@@ -1,12 +1,12 @@
 import React from "react";
 import './loggin.style.css'; // Cambio en la importación de estilos
 
-export default function LoggingComponent({OnSubmit}) {
-    const [value,setValue] = React.useState('');
+export default function LoggingComponent({onFormSubmit}) {
+    const [value,setValue] = React.useState("");
 
     function handleSubmit(event){
         event.preventDefault();   
-        OnSubmit();
+        onFormSubmit(value);
     }
  
     return (
