@@ -3,30 +3,30 @@ import HeaderComponent from "../commons/header/header.component";
 import LoggingComponent from "../Loggin/loggin.component";
 export default function AppIndex(){
     const [username, setUsername] = React.useState(()=>
-        window.localStorage.getItem('username')
+        window.localStorage.getItem('username') 
     );
-   
+
     React.useEffect(()=>{
-        window.localStorage.setItem('username',username)
-    },[username]);
+        window.localStorage.setItem('username',username);
+    },[username])
 
-    function onSubmit(value){
-        setUsername(value);
+    function onFormSubmit(value){
+        setUsername(value)
     }
-
     function onExit(){
         setUsername("");
     }
 
-   return (
+    return (
         <div>
             {
                 username?(
-                    <HeaderComponent username={username} onExit={onExit}/>
+                    <HeaderComponent username = {username} onExit = {onExit}/>
                 ):(
-                    <LoggingComponent onSubmit = {onSubmit} />
+                    <LoggingComponent onFormSubmit={onFormSubmit}/>
                 )
             }
         </div>
-   );
+    );
+
 }
