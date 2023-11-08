@@ -22,6 +22,7 @@ export default function AppIndex(){
             {
                 username?(
                     <AppNotesComponent username={username} onExit={onExit}/>
+                    // <h1>HOLA</h1>
                 ):(
                     <LoggingComponent onFormSubmit={onFormSubmit}/>
                 )
