@@ -1,17 +1,17 @@
 import React from "react";
 import './loggin.style.css'; // Cambio en la importación de estilos
 
-export default function LoggingComponent({onFormSubmit}) {
-    const [value,setValue] = React.useState("");
-
-    function handleSubmit(event){
-        event.preventDefault();   
-        onFormSubmit(value);
+export default function LoggingComponent({onSubmit}) {
+    const [value, setValue] = React.useState("");   
+    
+    function updateInfo(event){
+        event.preventDefault();
+        onSubmit(value);
     }
- 
+
     return (
         <div className="container">
-            <form className="loggin__form" onSubmit={handleSubmit}>
+            <form className="loggin__form" onSubmit={updateInfo}>
                 <div className="input-group">
                     <h1 className="loggin__title">Welcome To Codeable Keep</h1>
                     <label htmlFor="username">username</label> {/* Corrección en el atributo "for" */}

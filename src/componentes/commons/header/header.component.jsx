@@ -1,7 +1,7 @@
 import React from 'react';
 import './header.style.css';
 
-export default function HeaderComponent({username,onExit}){
+export default function HeaderComponent({username, onExit}){
 
     return(
         <header className='header'>
