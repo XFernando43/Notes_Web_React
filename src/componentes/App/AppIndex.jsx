@@ -1,6 +1,6 @@
 import React from "react";
-import HeaderComponent from "../commons/header/header.component";
-import LoggingComponent from "../Loggin/loggin.component";
+import LoggingComponent from '../Loggin/loggin.component';
+import AppNotesComponent from "../Core/appNotes.component";
 export default function AppIndex(){
     const [username, setUsername] = React.useState(()=>
         window.localStorage.getItem('username') 
@@ -21,7 +21,7 @@ export default function AppIndex(){
         <div>
             {
                 username?(
-                    <HeaderComponent username = {username} onExit = {onExit}/>
+                    <AppNotesComponent username={username} onExit={onExit}/>
                 ):(
                     <LoggingComponent onFormSubmit={onFormSubmit}/>
                 )
