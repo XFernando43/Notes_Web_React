@@ -1,48 +1,12 @@
 import React from "react";
+import './notes.style.css'
 
-const url_base = "https://codeable-keep-api-production.up.railway.app/api";
-
-export default function NotesComponent({username}){
-    const [notes, setNotes]=React.useState([]);
-
-
-    React.useEffect(() => {
-        const url = `${url_base}/${username}/notes`;
-        fetch(url)
-          .then((response) => {
-            if (!response.ok) {
-              alert("Something went wrong with the API");
-            } else {
-              return response.json();
-            }
-          })
-          .then((data) => {
-            setNotes(data.notes);
-          })
-          .catch((error) => {
-            console.error('Hubo un error inesperado');
-          });
-      }, []);
+export default function NotesComponent(){   
 
     return(
-        <div>
-            hola soy el cuerpesito
-            <ul>
-                <h1>HOLA SOY UN CUERPOTE</h1>
-                <button
-                onClick={()=>{
-                    console.log(notes)
-                }}>
-                    mostrar
-                </button>
-
-                {
-                    notes.map((nota)=>(
-                        <h1 key={nota.id}>{nota.id}</h1>
-                    ))
-                }
-
-            </ul>
+        <div className="card_container">
+            <h1 className="card__title">Nota Ejemplo</h1>
+            <p className="card__text">Cuerpo de nota</p>
         </div>
 
     );
