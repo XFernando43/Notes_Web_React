@@ -1,13 +1,14 @@
 import React from "react";
 import './loggin.style.css'; // Cambio en la importación de estilos
 
-export default function LoggingComponent({updateUsername}) {
-    const [value, setValue] = React.useState('');
+export default function LoggingComponent({OnSubmit}) {
+    const [value,setValue] = React.useState('');
 
     function handleSubmit(event){
-        event.preventDefault();
+        event.preventDefault();   
+        OnSubmit();
     }
-
+ 
     return (
         <div className="container">
             <form className="loggin__form" onSubmit={handleSubmit}>
@@ -23,9 +24,7 @@ export default function LoggingComponent({updateUsername}) {
                         required
                         onChange={(e) => setValue(e.target.value)} 
                     />
-                    <button type="submit" className="button" onClick={()=>{
-                        updateUsername(value)
-                    }}>
+                    <button type="submit" className="button">
                         Enter
                     </button>
                 </div>
