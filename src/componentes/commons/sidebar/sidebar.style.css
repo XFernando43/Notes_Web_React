@@ -1,5 +1,5 @@
 .sidebar_container{
-    /* padding: 16px 0px; */
+    padding: 16px 0px;
     border: 1px solid black;
     width: 280px;
     height: 797px;
@@ -10,13 +10,18 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    /* margin: 10px 0px; */
+    padding: 0px;
 }
 
 .Page_link{
     display: flex;
     flex-direction: row;
     gap: 20px;
+}
+
+.Page_link img,h2 {
+    position: relative; 
+    left: 20px;
 }
 
 .option{

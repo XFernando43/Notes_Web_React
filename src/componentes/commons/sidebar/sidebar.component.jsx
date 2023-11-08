@@ -11,10 +11,9 @@ export default function SidebarComponent(){
                     <h2 className='option'>
                         Notes
                     </h2>
-
                 </li>
 
-                <li className='Page_link'>
+                <li className='Page_link selected'>
                     <img src={trash} alt="" />
                     <h2 className='option'>
                         Trash
